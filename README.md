@@ -1,4 +1,4 @@
-# Matrix (2D Arrays) and it's Operations in C++
+# 2D Arrays (Multidimensional Arrays) and it's Operations in C++
 
 Aim : To study and implement operations on 2D arrays (matrices) in C++.
 
@@ -42,11 +42,15 @@ This program demonstrates how to take input-output in a matrix and display it in
 
 Algorithm:
 
-1. Define matrix of size 3x3.
-   
-2. Input matrix elements.
-   
-3. Display matrix elements in row-column format.
+1. Initialize a 3×3 integer matrix.
+
+2. Request user to input all matrix elements.
+
+3. Read elements using row-wise nested loops.
+
+4. Assign each value to its corresponding matrix index.
+
+5. Print the matrix.
 
 ## 2. Matrix Addition:
 
@@ -54,15 +58,19 @@ This program adds two matrices of the same dimensions by summing their correspon
 
 Algorithm:
 
-1. Input dimensions of both matrices.
+1. Accept row and column sizes for two matrices as user input.
 
-2. Input elements of both matrices.
+2. Verify matrix dimensions match for addition compatibility.
 
-3. Initialize result matrix.
+3. Declare separate 2D arrays to store both matrices.
 
-4. Loop through all elements and add corresponding elements.
+4. Populate matrix elements through row-column iteration.
 
-5. Display the resultant matrix.
+5. Print both matrices with proper formatting.
+
+6. Compute sum by adding corresponding elements position-wise.
+
+7. Output the resultant matrix
 
 ## 3. Matrix Multiplication:
 
@@ -82,39 +90,57 @@ Algorithm:
 
 6. Display the result matrix.
 
-## 4. Matrix Transpose:
+## 4. Addition of diagonal elements of a 2-D Array:
 
-This program calculates the sum of diagonal elements in a square matrix (same number of rows and columns).
+This program calculates the sum of diagonal elements in a square matrix (same number of rows and columns) if matrix dimensions are not same then it will prompt user about it.
+
+ Algorithm:
+
+1. Input matrix dimensions.
+
+2. Declare 2D array mat[x][y] and input elements
+
+3. Display the entered matrix with proper formatting
+
+4. Check if matrix is square (x == y): If true: Calculate sum of diagonal elements (mat[i][i]) If false: Display "Diagonal sum not possible"
+
+5. Output the diagonal sum result or error message
+
+## 5. Matrix Transpose:
+
+This program creates the transpose of a matrix by swapping its rows with columns.
 
 Algorithm:
 
-1. Input rows and columns.
+1.Accept row and column dimensions as user input.
 
-2. Input matrix elements.
+2. Initialize original and transposed matrix structures.
 
-3. Create transpose matrix with swapped dimensions.
+3. Populate matrix elements through row-wise nested iteration.
 
-4. For each element (i,j), assign to transpose[j][i].
+4. Print the input matrix with proper formatting.
 
-5. Display the transposed matrix.
+5. Generate transpose by interchanging indices (mat_T[j][i] = mat[i][j]).
 
-## 5. Sum of Diagonal Elements of a Matrix:
+6. Output the transposed matrix with flipped dimensions.
+
+## 6. Comparing Two Matrices:
 
 This program checks if two matrices are exactly equal in both size and element values, if not user will be prompted appropriately.
 
 Algorithm:
 
-1. Input the number of the rows and columns.
+1. Input dimensions of both matrices.
+   
+2. If dimensions are unequal, report not equal.
 
-2. Check if the matrix is square (rows == cols).
+3. Input elements of both matrices.
 
-3. Input the matrix elements if it is a square matrix.
+4. Loop through all positions in both matrices:
 
-4. Initialize a sum variable to 0.
+5. If any mismatch is found, mark as not equal and exit loop.
 
-5. Loop through each row i and add the element at matrix[i][i] to the sum.
-
-6. Output the sum.
+6. Print result accordingly.
 
 # Conclusion:
 
