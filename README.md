@@ -1,4 +1,4 @@
-# 2D_Array_in_cpp
+# Matrix (2D Arrays) and it's Operations in C++
 
 Aim : To study and implement operations on 2D arrays (matrices) in C++.
 
@@ -6,137 +6,115 @@ Tools: VS Code
 
 # Theory:
 
-A two-dimensional array (2D array) in C++ is a collection of elements stored in rows and columns, like a table or matrix. It is used to represent mathematical matrices or tabular data.
+## What is a 2D Array?
 
-Matrix operations are fundamental in many areas such as graphics, engineering, data processing, and numerical computations. In C++, we can use nested loops to perform operations like:
+A two-dimensional array (2D array) in C++ is a collection of elements stored in rows and columns, like a table or matrix. It is used to represent mathematical matrices or tabular data.It stores data in a grid-like structure, where each element can be accessed by two indices — one for the row and one for the column.
 
-# Matrix Input & Display
-Taking values for each row and column using nested loops.
+# Key points:
 
-Displaying matrix in matrix form using cout.
+* Declared as `data_type array_name[rows][columns];`
 
-# Matrix Addition
-Each element of matrix A is added to the corresponding element of matrix B.
+* Each element is accessed using `array[i][j]`
 
-`C[i][j] = A[i][j] + B[i][j]`
+* Useful for matrix operations like addition, multiplication, transpose, and diagonal summation.
 
-# Matrix Multiplication
-Row of A is multiplied with column of B:
+# Applications of 2D Arrays :
 
-`C[i][j] = sum(A[i][k] * B[k][j])`
+## 1. Mathematical Matrices:
+* Used to store and manipulate matrices in linear algebra.
+* Enables operations like addition, subtraction, multiplication, transpose, determinant, etc.
 
-# Diagonal Addition
-Sum of elements from top-left to bottom-right:
+## 2. Tabular Data (Tables & Grids):
+* Represents data in rows and columns, like a spreadsheet.
 
-`Sum = A[0][0] + A[1][1] + A[2][2] + ...`
+## 3. Image Processing:
+* A grayscale image can be represented as a 2D array of pixels (integers).
 
-# Transpose
-Converting rows to columns:
+## 4. Game Development:
+* Games that use grids (like Tic Tac Toe, Chess, Sudoku, Minesweeper) can use 2D arrays for the game board.
 
-`Transpose[i][j] = A[j][i]`
 
-# Comparison of Rows
-Element-wise comparison between first and second row:
+# Program Explanations :
 
-`if(A[0][j] == A[1][j])`
+## 1. 2D Array Input and Display:
 
-# 1. Matrix Input & Display 
+This program demonstrates how to take input-output in a matrix and display it in matrix form 2D array handling.
 
 Algorithm:
 
-Start
-2.Input number of rows and columns
+1. Define matrix of size 3x3.
+   
+2. Input matrix elements.
+   
+3. Display matrix elements in row-column format.
 
-Use nested loop to input each element of matrix
+## 2. Matrix Addition:
 
-Use another nested loop to display the matrix
+This program adds two matrices of the same dimensions by summing their corresponding elements and stores in other matrix, if dimensons are not same then it will prompt user .
 
-5.End
+Algorithm:
 
-🔴 2. Addition of Two Matrices – Algorithm:
+1. Input dimensions of both matrices.
 
-Start
-2 Input number of rows and columne
+2. Input elements of both matrices.
 
-3.Input elements of Matrix A
+3. Initialize result matrix.
 
-Input elements of Matrix B
-5 For each element, add A[i][j] + B[i][j]
+4. Loop through all elements and add corresponding elements.
 
-6.Store result in a third matrix C[i][j]
+5. Display the resultant matrix.
 
-7.Display matrix
+## 3. Matrix Multiplication:
 
-8.End
+This program multiplies two matrices where columns of matrix 1 match rows of matrix 2 and store it in other matrix if dimensions doesn’t match so it will prompt user.
 
-🔴 3. Multiplication of Two Matrices – Algorithm:
+Algorithm:
 
-Start
+1. Input rows and columns for both matrices.
 
-Input number of rows and columns
+2. Check if column count of matrix 1 equals row count of matrix 2.
 
-Input elements of Matrix A
+3. Input elements of both matrices.
 
-4.Input elements of Matrix B
+4. Initialize result matrix to zero.
 
-5.Initialize result matrix C[i][j] = 0
+5. Multiply for each element of result, sum products of row elements of matrix 1 and column elements of matrix 2.
 
-6.Use 3 nested loops:
+6. Display the result matrix.
 
-  🔸 Outer loop: for each row of A
+## 4. Matrix Transpose:
 
-  🔸 Middle loop: for each column of B
+This program calculates the sum of diagonal elements in a square matrix (same number of rows and columns).
 
-  🔸 Inner loop: multiply A[i][k] * B[k][j] and add to C[i][j]
+Algorithm:
 
-Display matrix C
-End
-🔴 4. Diagonal Addition – Algorithm:
+1. Input rows and columns.
 
-Start
-2.Input size n of square matrix
+2. Input matrix elements.
 
-3.Input matrix elements
+3. Create transpose matrix with swapped dimensions.
 
-Initialize sum = 0
+4. For each element (i,j), assign to transpose[j][i].
 
-Use loop: for i = 0 to n-1, add A[i][i] to sum
+5. Display the transposed matrix.
 
-Display the sum
+## 5. Sum of Diagonal Elements of a Matrix:
 
-End
+This program checks if two matrices are exactly equal in both size and element values, if not user will be prompted appropriately.
 
- 5. Transpose of a Matrix – Algorithm:
+Algorithm:
 
-Start
-2.Input rows and columns
+1. Input the number of the rows and columns.
 
-3.Input elements of matrix
+2. Check if the matrix is square (rows == cols).
 
-4.Use nested loop:
+3. Input the matrix elements if it is a square matrix.
 
-  🔸 Outer loop for i = 0 to column
+4. Initialize a sum variable to 0.
 
-  🔸 Inner loop for j = 0 to row
+5. Loop through each row i and add the element at matrix[i][i] to the sum.
 
-  🔸 Print A[j][i] instead of A[i][j]
-
-End
-🔴 6. Compare First and Second Row – Algorithm:
-
-Start
-
-Input number of rows and columns
-
-Make sure there are at least 2 rows
-
-Input matrix A
-
-Use a loop to compare A[0][j] and A[1][j] for each column
-
-6.If equal, print "Equal", else "Not Equal"
-
-End
+6. Output the sum.
 
 # Conclusion:
 
